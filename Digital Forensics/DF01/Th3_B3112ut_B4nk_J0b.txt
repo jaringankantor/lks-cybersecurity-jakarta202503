@@ -1,0 +1,532 @@
+The Beirut Bank Job
+
+JACK:	awnFSiEDLd{84CK9R0UND N0153}  When you go into a bank you see all kinds of physical security checks.
+There are thick panes of glass between the tellers and customers, vaults with a large heavy door, cameras everywhere, a security guard is walking around.
+But do you think about ways you could bypass all of that?
+You might notice a back door to the bank and wonder if it’s unlocked, or the door between the tellers and customers is so short that you could jump over it.
+Or maybe you see a blind spot in the way the cameras are pointing.
+In this episode we’re going to test the physical security of a bank but our goal isn’t to steal cash.
+It’s to get access to the teller’s computer.
+JACK (INTRO):	EppkhZzvFM{1N7R0 MU51C} This is Darknet Diaries, true stories from the dark side of the internet.
+I’m Jack Rhysider.
+xxmPIQoUIA{1N7R0 MU51C 3ND5}
+JACK:	In this episode we’re going to hear a story from Jason E.
+Street.
+JASON:	What’s up.
+JACK:	Jason is one of those guys who has endless stories of incredible things that have happened to him.
+He’s also a Diet Pepsi addict.
+When you talk to him you hear him say random things like…
+JASON:	It’s never drinking the Diet Pepsi that gets me.
+It’s usually trying to get rid of the Diet Pepsi that gets me.
+I almost died peeing off a cliff in Bulgaria.
+JACK:	While I was talking to him I was kind of curious to hear the back story of all these little footnotes that he was throwing at me, but it didn’t take long before I heard him say something that I just had to hear the whole story.
+JASON:	I accidentally robbed the wrong bank the last time I was in Beirut.
+JACK:	Jason started out in law enforcement but for almost the last twenty years he’s been working in InfoSec.
+He’s done considerable work defending the network but he’s also done numerous penetration tests.
+One of his favorite things to do is what he calls Security Awareness Engagement.
+He’s hired by companies to test the physical security of a place.
+For instance, it shouldn’t be possible for a guy to just walk off the street, walk bHdnMKUOiv{F007573P5} right into an office, walk directly past reception, sit down at a random computer, and do work and then walk out.
+nlTcpOiVMQ{D00R CL0535}  He should be stopped, right?
+A door should be locked, reception should not let him pass, and the computer should be locked.
+Then someone should notice that he shouldn’t be there.
+This is what should stop him but companies hire Jason to actually test if this kind of thing is possible.
+JASON:	When I do these engagements they’re not red team engagements.
+They’re not pin-testing.
+They’re literally security awareness engagements.
+I don’t mind getting caught and if I don’t get caught, I try to get caught by the end of the engagement because I’m trying to teach the employees how to be better.
+JACK:	While you listen to this story you may question the legitimacy of what he’s saying.
+I know I have.
+So I will be providing photos and videos of him doing these things.
+You can check out the show notes to see these.
+The stories you’re about to hear were all captured by his wrist camera, a button camera on his jacket, or closed-captioned cameras in the bank itself.
+In fact, there’s even an episode of National Geographic that filmed him doing some of the stuff he’ll talk about.
+I’ve fact-checked the story as best I can and amazingly enough, it checks out.
+pszkzEhGGE{MU51C}  A few years back, a bank hired him to do one of these security awareness engagements.
+They wanted him to test the physical security of a bank in Beirut.
+Jason got on a flight and headed to the Middle East.
+Beirut is the capital city of Lebanon which is nestled between Syria and Israel and has lovely views of the Mediterranean Sea.
+The main language is Arabic but they also speak French and English.
+Jason arrives at the bank headquarters.
+It’s a tall building at least thirty stories high.
+There’s a bank branch on the ground floor.
+The other floors are the bank’s offices.
+Jason heads up to the twentieth floor to a conference room.
+JASON:	Okay, so I started off with a meeting that morning with a guy who wasn’t too – very impressed with me, to say the least.
+I’m not good at making a good first impression for some reason.
+He’s just being very condescending ‘cause I’m American and I’m you know, weird and all that.
+He’s like, I don’t know if we’re going to be able to – zRCSginTBk{1N4ud18l3} going to be able to fall for that, JAHiidEZvU{00:05:00} or what do you need for us to help you?
+I’m like, you know what, why don’t I just go downstairs right now and compromise your branch downstairs?
+He’s like, what?
+So we went downstairs and I compromised his whole entire branch, even was behind his teller line.
+He was not thrilled with that.
+But then I sort of shot myself in the foot a little bit because now they’re like okay, well you’re so good, we want you to see if you can get actual network compromise.
+I’m like, well how would I show network compromise from physically stealing stuff?
+I will get us a user ID, a password, a smart card, a computer, and network access.
+We’ll give you three chances in three different branches.
+You go and do what you can to do that.
+This was like, sure, whatever.
+We’ll see what happens.
+Yolo.
+JACK:	pszkzEhGGE{MU51C}  Jason doesn’t like to do a lot of recon before a mission like this.
+If he’s working with another person on the mission and they start planning and plotting and prepping for the break-in, Jason will just say…
+JASON:	Can’t I just walk in and be adorable?
+That seems to work with me.
+JACK:	Jason gets suited up.
+JASON:	I’m wearing a leather jacket that says Defcon on it, red Thundercat tennis shoes,  a khaki shirt, and a collared shirt but with a badge that has their lanyard which I could have gotten anywhere, the trash, whatever, with a card that’s just a blank card that looks like a HID card.
+JACK:	He likes to wear what he calls his vest of doom, which contains a few essentials needed for this mission.
+JASON:	Usually it’s a pwn plug, it’s a USB rubber ducky, it may be a Proxmark3 tool, a couple Dropboxes, just some malicious things to show them the damage that I could do.
+I never really execute code.
+I never really do any kind of the actual – exploit the vulnerabilities.
+I’m doing it just to show what the potential is.
+Remember, I’m not trying to get a red team.
+I’m not trying to do red team.
+I’m not trying to exploit them.
+I’m not trying to show their vulnerabilities.
+I’m trying to educate them on the dangers that actually exist.
+JACK:	Jason is all set now, so he gets picked up by the driver and is taken to the bank.
+JASON:	I go to the first branch and I literally just walk in.
+I walk in and I walk exactly like I know where I’m going.
+I walk past the executive.
+I walk to this manager’s office where he’s talking to someone.
+He doesn’t see me look in so I pause right outside his door but before I get back to the– the executive can see me, and I wait there for about thirty seconds.
+pszkzEhGGE{MU51C}
+JACK:	This pause he’s doing is important.
+He didn’t go immediately to the tellers.
+Instead he went in the opposite direction to a hall with offices.
+He’s hovering just outside the manager’s office because he wants to look like he’s meeting with the manager, so that when he moves to the next location in the bank, he’s hoping someone will see him coming from the manager’s office.
+JASON:	Then I walked from there straight into the executive’s office.
+Her first impression has gotta be that I just finished talking to the manager.
+I tell her that yeah, I’m here with the auditor.
+We’re doing an audit on the computer systems from head office.
+I need to look at the computer.
+JACK:	Because it looked like he had just come out of the manager’s office, she bought the story and let him use her computer.
+The first thing he does is plug a rubber ducky into her machine.
+Rubber ducky looks just like any other regular USB stick but it’s actually an incredibly dangerous tool.
+When it’s plugged into a computer it tells the computer that it’s a keyboard and rubber ducky then proceeds to send pre-recorded keyboard commands to the computer.
+Rubber ducky can be configured to create a remote control session to that computer.
+By simply plugging it into a computer for only a few seconds it can give a hacker full control of that machine from a remote location.
+But Jason’s rubber ducky only opens a notepad and types the word ‘Hello’ in it because he doesn’t want to actually hack into the machine; he just wants to test if the machine is hackable.
+Once he sees Notepad pop up he takes a picture of the screen with his iPad, and then takes the mouse, closes the window, and unplugs the rubber ducky.
+JASON:	I’ve plugged in the device.
+Now I’m golden because now people are seeing me come out of her office after coming out of the manager’s office.
+I go to this other lady that’s beside the teller line.
+She made eye contact with me as I left so I stayed straight-on eye contact with her, went to her desk, and I tell her hey, look, I’m doing an audit on the machines from head office.
+I need to go through all these machines.
+Got her to let me compromise her machine.
+So she thinks now – she’s bought into the whole thing so she walks me behind the teller line and then I then proceed to compromise the teller that’s behind there.
+That took a whole two minutes and twenty-something seconds from walking in the door from the very first time.
+
+
+JACK:	At this point Jason is now hanging out behind the teller line in the bank.
+He’s asked tellers if they can move out of the way while he plugs in his rubber ducky into their computer, and then he takes control of their mouse and begins using it.
+It didn’t take him long to do this to every computer VezlrwdUBL{00:10:00} behind the teller line.
+After he touches every computer he sees, he starts messing around with the other electronics like scanners, printers, monitors, everything.
+At one point while he was only a couple feet away from the teller, a person was making a large deposit.
+JASON:	Yeah, I took pictures of that, actually.
+He was depositing $250,000 in cash.
+I could have reached out and touched it.
+One of the executives that was there watching this go down actually wanted me at one point to go and steal the money because I was getting everything, because about five minutes after I was behind the teller line.
+I was there for almost thirty minutes.
+I was behind the teller line and at all the different offices.
+I totally compromised this whole facility and had full carte blanche.
+The manager shows up at about ten minutes, fifteen minutes after I was already doing everything and I then – he assumes everybody was – verified me, so I’m safe.
+Everybody thought that he verified me, so therefore I was safe.
+No one actually verified me.
+It took crosstalk between the two.
+I get one to think that the other one verified me.
+JACK:	At this point Jason had established himself so well that the manager asked him to take a look at a computer problem they’ve been having.
+Jason said in order to help he’s going to need a user ID, a password, and a smart card.
+So they gave it to him.
+Jason looked at the problem for a minute and told them he’ll just replace that computer with a new one.
+The manager was thrilled to hear this news and asked him to take a look at the scanner and monitors, too.
+Jason decided to just tell him that headquarters is planning to do a full refresh of all the equipment, which was a total lie.
+The manager reacted to this like a kid getting presents on his birthday.
+JASON:	I tell him that I’m here to help do a restore and a rebuild of their – remodel of their office, their branch.
+He lets me do everything except for going to the vault.
+It’s like, that’s the only place he wouldn’t let me go into ‘cause there was no phone lines or jacks or any kind of internet devices in there.
+Though I asked and said are you sure?
+Let me take a look.
+While I was there I got the user ID, the password, and the smart card from one of the main supervisors.
+I successfully got three of the things in the first branch.
+JACK:	Jason kept trying to push the limits of what he was allowed to do.
+He began taking things out of the building.
+JASON:	I literally left the branch about three times.
+I walked out with all the documentation underneath the teller’s desk, their notepads, I walked out with that.
+Then I got all the – I got his user ID, password, badge, let me work on the machine, then I walked away with his badge saying I need to use this to go test something.
+I left with that.
+Then there was something else that I took, and I left with that.
+I left the building three times.
+The branch was so horrible on their response, I literally waited in there until the whole branch was closed for the day and then I had everybody come around and had the executive that was with me actually translate everything into Arabic just to make sure everybody understood fully how bad the situation was and how bad I compromised them and what they need to do to be better protected and to be better aware of things like this in the future.
+That’s when they first became aware that I was a bad guy.
+JACK:	The bank manager was still confused about who Jason was.
+JASON:	He was like – it was like kicking a puppy.
+I felt so bad because after I took teaching everybody and training them what’s going on, he raised his hand during this whole all-hands meeting and he says what about the free computers?
+Do we still get the new computers?
+I’m like no, I was lying to you.
+I’m a horrible person.
+
+
+JACK:	The next day Jason meets up with his driver to take him to the next branch.
+Jason has two objectives left; to steal a computer and to get network access.
+The driver drops him off outside the bank.
+JASON:	voWhWXRceQ{7R4FF1C 50UND5}  It was a glass building and there was a sign on the door.
+The sign on the door said something in French and Arabic.
+It had an arrow and I’m like, I have no idea what that means.
+I guess it meant go to the door next door, go to the next door.
+I’m walking and I go and I’m about to walk in the door and I hear the horn honking.
+oOfkKwpAcq{H0RN H0NK1N9}  It’s just insistent.
+There’s a lot of traffic but this is actually – it got to the point right before I got in – I already targeted someone inside behind the teller line to go talk to.
+The horn honking was insistent so I turned around and looked to see who it was.
+Sure enough it was my guy who was driving me and I went up to him.
+He’s like, that’s the wrong bank.
+That’s the wrong bank.
+I was like yeah, but there’s a sign on the door.
+It says push the button for entry.
+I’m like oh, so I go back to the original door and I push the button and that lets me in.
+JACK:	Jason is known for giving awkward hugs but if he would have gone into the wrong bank and tried to steal a computer from it, this would have been a whole new level of awkwardness that he would not have been prepared for.
+Luckily his afLKAhuZal{00:15:00} driver caught him before entering the wrong bank.
+He reset himself and went into the right bank.
+JASON:	I felt bad about all the stuff I did in the first one so I vowed not to talk to anybody.
+pszkzEhGGE{MU51C}  I just walked back, found the break room, got a little bit of water so that way, after a couple of minutes, I’m now approaching from a different direction.
+Instead of coming from the untrusted side, I’m now coming and approaching from the trusted side.
+It’s all psychological.
+I walk into the – behind this door that got me into the teller area, like a little circular kind of thing.
+I literally go up to the – beside the teller that’s actually conducting business beside me and without even saying a word to him I start unplugging the computer.
+Unplug it, disconnect everything, and I walk out with it.
+
+
+JACK:	How is that possible?
+JASON:	Because what kind of crazy person walks into a freaking branch and steals a computer?
+Besides me, that is.
+It was a small computer, in their defense.
+JACK:	Now Jason has four of the five objectives complete and has one branch left.
+The last objective is to get network access.
+The driver takes Jason to the last branch.
+pszkzEhGGE{MU51C}
+JASON:	That was the simplest.
+I just walked up and there was a lady cleaning offices.
+I tell her I need to get into the network halls.
+I’m doing some work for headquarters.
+She just opened the door.
+That was very anticlimactic at that point.
+JACK:	Why did that work?
+JASON:	Because they don’t associate that with money.
+That’s just a network closet.
+I don’t have a ski mask, I don’t look threatening.
+I’m smiling and I’m laughing and joking around.
+I’m harmless.
+Why not let me in?
+JACK:	He took a picture of himself in their networking room and all their networking equipment, then left that room and closed the door behind him and walked out of the bank.
+Jason had easily broken into three banks in three days and completed all five of his objectives.
+He met back up with the executives that hired him.
+Their response was…
+JASON:	Shocked.
+Literally, they were flabbergasted.
+It was just unbelievable to them that that occurred.
+They were like, this cannot be real.
+JACK:	pszkzEhGGE{MU51C} A few years pass.
+Jason gets another call for another security awareness engagement.
+This time it’s a different bank in Beirut so he heads back out there.
+JASON:	I was hired to…
+JACK:	Of course he has to have a Diet Pepsi while he tells the story.
+JASON:	I was hired to rob a bank there for this one bank.
+There’s a problem with – there’s a lot of banks in Beirut so I was doing this one engagement.
+We started out that morning.
+It was very successful.
+We started off with a success.
+Then the one that we totally compromised started sending out phone calls to other people to warn them about me.
+I was a little upset.
+We were going one off-script to a branch that they didn’t know about, hoping that we’d be able to get them unawares.
+I’d already drunk a 1.5 litre bottle of Diet Pepsi already which usually leads me to problems.
+I had to go really bad and the guy’s telling me that – the guy who’s the liaison for the engagement is telling me okay, go down this sidewalk.
+Toward the end, it’s right there.
+Just go in and I’ll be in there two minutes after you because he’s my get out of jail free card.
+So, I go down.
+All I’m thinking about, literally – I’m looking at other stores and other places if I can find one with a restroom.
+I’ll go into it first so I wouldn’t go into the bank already having to go to the restroom.
+
+
+But I couldn’t find one.
+I see the branch.
+I don’t look at the sign zRCSginTBk{1N4ud18l3}.
+It’s got tellers, it’s the bank I’m supposed to go into.
+I get into it.
+I know that the bathrooms in Europe and a lot of other countries, they’re either on the second floor or in the basement.
+They’re never on the first floor.
+I automatically look for the stairs for going up or down.
+I find some stairs going up.
+Second floor, sure enough, right there is the bathroom.
+I’m really happy about that.
+I use the bathroom, I come back down.
+I’m at the head of the stairs, at the top of the stairs and I’m looking down.
+I see two people working in a cube.
+I’m like well, I’m supposed to start working.
+pszkzEhGGE{MU51C}
+So I go down there, tell them I’m with Microsoft, show them my fake Microsoft badge, plug in the sIOdPUMrOa{00:20:00} rubber ducky, compromise their machine.
+This screen pops up.
+The window text document pops up saying hey, this shouldn’t have happened.
+Then I go to the next one and I compromise that machine.
+I’ve already succeeded.
+I’m already done.
+The whole engagement’s already completed.
+I’ve already compromised their network.
+The security awareness engagement, the success is plugging it into one device ‘cause one device is all it takes to compromise the network.
+Everything else is gravy and teaching experiences for the employees, because I compromise all the employees and then I go back and I talk to all the employees and tell them what I did and what they did wrong that allowed me to do what I did.
+I get the second one and I’m really happy now.
+I’m feeling relaxed.
+Then this guy comes up to me when I’m going to the third one and he says what are you doing here?
+I’m like oh, I’m here with Microsoft.
+I’m doing a USB audit where I can – because the merging of acquisitions.
+This was supposed to be very hush-hush.
+I show him this forged e-mail on an iPad.
+You always do it on an iPad because that makes it look legit.
+If it was on paper, it could be just printed out.
+I put it on the iPad so it would look more legit.
+I show him this forged e-mail that’s from the CFO of the bank who’s actually also the daughter of the owner of the bank, giving me authorization to do this audit.
+They said well, you’ve got to talk to the supervisor for that.
+I’m like okay, ‘cause I’ve already won so all I have to do now is just escape.
+I go to the supervisor and I show her the e-mail.
+Now, this get out of jail free card, this forged e-mail has two options that I knew of; option one was they read it and they go okay.
+This looks totally legit.
+Option two and they go yeah, this looks sketchy.
+I’m going to need some more documentation.
+I need to call someone.
+Then I go and say very innocently and adorably like hey, do you need more paperwork?
+‘Cause I have some more paperwork in my car.
+I can go and get that.
+Then they let me leave and that’s a find because they’ve allowed me to escape after they realize something suspicious is going on.
+Well, it turns out there’s a third option.
+This third option was not known to me or even conceived in me for a very long time, because I had just never – it just never crossed my mind.
+But the third option is when the lady reads the e-mail, looks at me very sternly and very upset and says, “This is for the bank next door.
+What are you doing in here and what did you plug into our computers?”  I kid you not, the first thing I said – I mean, I could have done all these pretexts, I could have done all this other – but I was not prepared for that.
+I just looked at her dead in the eyes and said like, this is unfortunate.
+This is unfortunate.
+Yeah, I got nothing.
+I should not be here.
+pszkzEhGGE{MU51C}
+About two minutes later I’m in the bank manager’s office.
+Don’t even ask me how I got there.
+I’m sitting down in this chair.
+Six people were speaking Arabic very angrily around me and I’m like, this is not a good thing.
+I start to panic a little bit and I’m like guys, it’s just a – it opens up a text document.
+It’s totally fine.
+I’m doing an engagement.
+This is what I do.
+I said look, and I plugged the USB drive into the bank manager’s computer, which I thought at the time was a very good idea.
+It popped up the notepad.
+It showed that this is all it said.
+Then I look behind me and I see their faces and I’m like, oh yeah.
+I just compromised another machine but with more witnesses.
+This is unfortunate.
+That did not work out as well as I thought it would be.
+I literally even got to the point where I was just like, you can Google me.
+I’m known for this stuff.
+They’re very unhappy.
+By that time the representative from the company that hired me, he found out where I was at ‘cause he realized I had not shown up in the branch that I was supposed to be at.
+He didn’t know where I was.
+He thought I was in the back room compromising everything there ‘til finally he realized wait, something’s off, and then went looking for me.
+He found me and then he was able to start talking to them in Arabic and English and French ‘cause it’s a mixture.
+They speak all three languages fluently.
+He’s talking to them; he’s trying to explain to them what’s going on.
+Then finally they were like okay, you have to go to the head office with an escort so the head security team can go and look at this payload and make sure that it’s not something malicious or what’s going on.
+So we drive to the head office.
+pszkzEhGGE{MU51C}
+JACK:	Jason is now being escorted by car to the headquarters of a bank that he accidentally broke into.
+He was starting to get pretty worried.
+JASON:	It was not going well.
+I ToTNcImpFr{00:25:00} was a little nervous.
+I have to be honest with you; I don’t know the condition of Lebonese prisons but I don’t want to ever find out.
+I’ve never watched Locked Up Abroad, thankfully.
+I was a little nervous.
+I literally, legit technically did bad things.
+JACK:	While he didn’t actually do anything malicious to a computer, he did cross the line for where he shouldn’t pszkzEhGGE{MU51C} have been physically and he lied to the employees about why he was there.
+The situation would have been a lot worse if he had actually tried to take a computer out of the building.
+Lucky for him, the USB rubber ducky he was plugging in did not actually do anything bad to their computers.
+He kept trying to explain himself as they drove him to the bank’s headquarters but they still wanted their security team to check out the rubber ducky and question him further.
+JASON:	I get into the head office pszkzEhGGE{MU51C} and I get to their floor and we find some other security vulnerabilities because they allowed us to walk around unescorted into areas they shouldn’t have, which was another finding.
+I finally get into the security department’s office and I literally, I’m doing the best I can to be as adorable as I can.
+I’m making jokes about having to pee.
+I’m making jokes about everything.
+I’m trying to be all disarming.
+Luckily we had the rubber ducky sticker still on the rubber ducky, when usually I take it out of the casing to make it look sketchier, which luckily I did not do this time.
+They were able to Google rubber ducky.
+They were able to see that it was a testing tool.
+They interrogated – it was like, four hours it seemed like.
+pszkzEhGGE{MU51C}
+I actually spent at least two of the hours giving them educational training, consulting with them on all the things they did wrong that allowed me to successfully do what I did.
+When the Director of Security came in, I talked to him.
+I did some of the same old jokes to him, trying to disarm him.
+He calls the guy who hired us to rob the bank.
+They start talking and halfway through the conversation he literally says do we have to split the cost for this?
+At that point I realized it was probably going to be okay.
+As I’m leaving I tell them as I’m going out the door, I’m like we’re good, right?
+We’re okay.
+I gave you some consulting and I clinked my wrists together like, I don’t go to jail, we’re good, right?
+Yeah, we’re good, we’re good, you can go.
+I’m like good, I’m getting the F out and I left and I did not breathe a good sigh of relief until I was on a plane to Paris like, three days later.
+Who hasn’t robbed the wrong bank before?
+Mistakes happen.
+I did find out the next day that as soon as I left they closed that branch and did a forensic wipe on all their machines, which actually I’m not even mad, I can’t even blame them.
+That was probably a pretty good idea
+JACK:	Before leaving Beirut, Jason did find the right bank and successfully broke into it and gained access to all the computers in the first branch, including each of the tellers’ machines.
+In fact, that break-in he did was documented by National Geographic for an episode of a show called Breakthrough.
+He was tasked with breaking into three branches and he had no problem with two.
+One of the employees in the third branch stopped him from touching the computer.
+He showed them the forged e-mail on his iPad.
+The employee didn’t buy it and was suspicious.
+Jason said he had more documentation in the car and asked if he should go get it.
+The employee said yes.
+This allowed Jason to escape the branch.
+He was stopped but not caught.
+He was proud of them for stopping him and made sure to speak highly of them in his report for being good at stopping him.
+How can we protect ourselves from people like you?
+JASON:	By letting people know that it is okay for them to be suspicious when someone walks in, that they need to call someone to verify when someone new is around, that robbers don’t just carry ski masks and shotguns but they also have suits and USB drives.
+I think that’s the key thing, is that be wary of certain e-mails that look like they’re coming from – that have a link and an attachment should actually up your suspicious level by you know, 9,000 no matter what.
+No matter if you were expecting it or anything.
+You should always be cautious with it.
+You should always check and double check with the sender to make sure that’s what you were looking for.
+Also, when you see people new that are coming in or are saying that they’re going to be doing work in your area, there is no harm in verifying that and you never let someone follow you in with your ID and badge, using your access to get into the building.
+They should have their own access and get in themselves.
+We want to be polite.
+We don’t want to be rude.
+You have to not be rude but you have to be firm.
+BQvfuFXlsS{00:30:00} This is a security policy; this isn’t my decision, but this is a security policy.
+JACK:	Thank you Jason, for coming on the show and sharing you story with us.
+JASON:	Kudos for you for doing this and trying to get more information out there.
+That’s the key thing.
+We win by informing and giving knowledge out to others.
+You may not know what the threats are.
+JACK:	yuCJbgDFEz{0U7R0 MU51C} You’ve been listening to Darknet Diaries.
+You can find photos, videos, and more information about Jason in the show notes at darknetdiaries.com.
+Music is provided by Ian Alex Mac and Jahzzar.
+
+JACK:	pszkzEhGGE{MU51C}After the chaos of Beirut and dodging a potential stay in a Lebanese prison, Jason flew home, convinced he had completed one of the wildest jobs in his career.
+But as fate would have it, just six months later, his phone rang again.
+
+JASON:
+So, I’m at home, you know, sitting in my home office, petting my dog, sipping on some Diet Pepsi, and I get this email.
+It’s from another financial institution, but this one isn’t in Beirut.
+It’s in Amman, Jordan.
+And they’ve heard about what I did in Beirut.
+Apparently, word travels fast in the Middle East when an American walks into the wrong bank and almost causes a diplomatic incident.
+
+JACK:
+They wanted him to do the same kind of physical security test.
+This time with one caveat.
+
+JASON:
+The difference here was—they didn’t want me to go in.
+They wanted to see if I could get in without entering.
+In other words, could I convince someone to let me in without any badge, authorization, or even setting foot in the main bank.
+
+JACK:
+This was a new kind of challenge.
+Social engineering at a distance.
+Jason packed up his gear, threw in extra Diet Pepsi, and booked a flight to Amman.
+
+JASON:
+The flight lands, and I’m instantly hit by that same familiar feeling of adventure and anxiety.
+You know, the usual “Will I succeed or get arrested?” type of thing.
+
+JACK:	voWhWXRceQ{7R4FF1C 50UND5}
+He meets his contact from the bank at the airport.
+A friendly-looking Jordanian guy named Ahmed who seems excited about the operation.
+
+AHMED: (Excitedly)
+We’ve set everything up for you.
+Your hotel room, transportation—everything.
+We’re eager to see how far you can get without actually stepping inside.
+
+JASON:
+Great, because honestly, the last time almost got me blacklisted from an entire country.
+
+JACK:	pszkzEhGGE{MU51C}
+They laugh, but Jason knows he has his work cut out for him.
+That evening, Jason sets up surveillance from his hotel across the street from the bank.
+
+JASON:
+With binoculars in hand, a laptop by my side, and a ridiculous amount of caffeine from my trusty Diet Pepsi, I start taking notes.
+I'm watching how employees enter and leave the bank.
+I’m watching security patterns, cameras, and how deliveries are handled.
+
+JACK:
+The first night is just observation.
+Jason maps out a rough idea.
+The following morning, he kicks off the plan.
+
+JASON:
+I’ve got Ahmed on standby, so I call the bank posing as IT support.
+I tell them there’s a critical network issue, and if they don’t fix it right now, the entire system will go down.
+
+BANK EMPLOYEE: (Confused)
+But no one informed us about this?
+
+JASON:
+I escalate urgency.
+I say it's a corporate-level emergency and hand it over to Ahmed, who is acting as my "local supervisor."
+Ahmed backs me up perfectly, telling them they should’ve been informed by email, and this needs immediate resolution.
+
+JACK:
+The employee panics a bit and says he needs authorization from higher up.
+
+JASON:
+I expected that.
+So, we quickly fire off a spoofed email from the "headquarters" authorizing immediate remote access.
+I had set up the fake domain a week earlier.
+
+JACK:
+With the employee now convinced, Jason talks him through setting up remote access.
+It only takes fifteen minutes.
+
+JASON: (Laughing slightly)
+It worked so smoothly, I almost felt guilty.
+But then I remembered Beirut and thought, "Nope, this feels good."
+
+JACK:
+Once inside their network remotely, Jason’s mission escalates to full infiltration.
+He scans their network, copies dummy files, and simulates an actual cyberattack, leaving digital evidence for their team to analyze later.
+
+JASON:
+But the fun wasn't over yet.
+Ahmed and I decide to test their physical response too.
+We schedule a "maintenance" pickup for old hardware.
+I tell them someone will arrive shortly to collect outdated equipment, part of a standard IT replacement schedule.
+
+JACK:
+Ahmed, wearing an official-looking company shirt Jason had printed the night before, arrives at the bank.
+Without any resistance, the staff helps him load several computers and network gear into his vehicle.
+
+JASON:
+At this point, we have their hardware, network access, and they’re still thanking us for helping them.
+It's both hilarious and horrifying.
+
+JACK:
+The next day, they present their findings to the bank executives.
+
+EXECUTIVE: (Stunned)
+How... how did no one question this?
+How could they hand everything over to you?
+
+JASON:
+People trust authority.
+They trust confidence.
+It's all about perception.
+And that's exactly why your staff needs to be trained to question everything.
+
+JACK:
+After spending a week conducting intensive training sessions, Jason leaves Amman, knowing he’s given them the tools to protect themselves better.
+
+JASON:	pszkzEhGGE{MU51C}
+Another mission accomplished.
+Another bank hopefully safer.
+And another story to tell.
+
+JACK:	yuCJbgDFEz{0U7R0 MU51C}
+You've been listening to Darknet Diaries.
+Check out our show notes for more crazy details.
+Stay safe out there.
+
+AMyOVzJsBs{0U7R0 MU51C 3ND5}
+
+ikjMrIzJci{3ND 0F R3C0RD1N9}
+
