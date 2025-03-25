@@ -1,10 +1,10 @@
 # README.md
 
-## Th3_B3112ut_B4nk_J0b
+## The Beirut Bank Job
 
 **Oh great, another README file...**
 
-This one's supposedly about something called *Th3_B3112ut_B4nk_J0b.txt*.
+This one's supposedly about something called The Beirut Bank Job.
 
 I mean, seriously, who reads these anyway?
 
