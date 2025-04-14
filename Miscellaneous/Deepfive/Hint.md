@@ -1,7 +1,5 @@
 # Deepfive
 
-ZUnDu8Ozb1d5ZVDDrUEgw5Mgb1PCsEkgw4FhZHg=
-
 Long ago, a message was locked away by a paranoid agent.
 First, he sealed it in a language of *strange symbols*.
 Then, he shifted the meaning forward, *twisting every letter*.
